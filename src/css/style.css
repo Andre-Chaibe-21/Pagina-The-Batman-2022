@@ -1,0 +1,272 @@
+body {
+    background-color: #000;
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    width: 100%;
+}
+
+.menu a {
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    padding: 10px 30px;
+    background-color: #E80C03;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.menu img.logo {
+    width: 150px;
+    border-radius: 30px;
+}
+
+.banner img {
+    width: 100%;
+    height: 630px;
+    animation: animacao-banner;
+    animation-duration: 7s;
+}
+
+.apresentacao-filme {
+    margin-top: 30px;
+}
+
+.apresentacao-filme .historia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.trailer {
+    width: 520px;
+}
+
+.apresentacao-filme .historia .sinopse {
+    width: 300px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.botao {
+    font-size: 18px;
+    color: #fff;
+    background-color: #e42917;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s ease-in-out;
+}
+
+.elenco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 120px;
+    gap: 20px;
+}
+
+.elenco img {
+    width: 400px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.elenco .batman {
+    width: 340px;
+    height: 400px;
+}
+
+.elenco .mulher-gato {
+    width: 340px;
+    height: 400px;
+}
+
+.elenco .gordon {
+    width: 320px;
+    height: 400px;
+}
+
+.elenco div.ator {
+    position: relative;
+}
+
+.elenco div.ator p {
+    position: absolute;
+    bottom: 30px;
+    transform: translate(10px);
+}
+
+.elenco li img:hover {
+    box-shadow: 1px 1px 10px 1px #a8140f;
+    transform: scale(1.02);
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.rodape img {
+    width: 130px;
+}
+
+.rodape a {
+    color: #fff;
+    text-shadow: 2px 2px 1px #e42917;
+}
+
+.rodape p {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+
+
+    .menu img.logo {
+        animation: animacao-logo;
+        animation-duration: 4s;
+    }
+
+
+    .apresentacao-filme .historia .sinopse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 400px;
+        font-size: 20px;
+        margin-left: 0px;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .informacoes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .elenco {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cabecalho {
+        height: 470px;
+    }
+
+    .cabecalho .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cabecalho .menu li {
+        font-size: 35px;
+        font-weight: 700;
+        padding: 6px;
+        margin-bottom: 2px;
+    }
+
+    .botao {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 540px) {
+
+    .trailer {
+        display: flex;
+        width: 320px;
+    }
+
+    .apresentacao-filme .historia .sinopse {
+        max-width: 100%;
+        font-size: 20px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+
+    .informacoes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botao {
+        width: 100%;
+    }
+
+    .elenco {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 440px) {
+
+    .historia .informacoes .sinopse {
+       width: 90%;
+    }
+}
+
+@keyframes animacao-logo {
+
+    50% {
+        box-shadow: 6px 6px 30px 30px #E80C03 inset;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+
+@keyframes animacao-banner {
+
+    30% {
+        box-shadow: 1px 1px 40px 15px #b90d07;
+    }
+
+    60% {
+        box-shadow: 1px 1px 40px 15px #300806;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+
+}
